@@ -26,5 +26,12 @@
     "title": "Personal",
     "section": "",
     "text": "I am a dog person. 🐀"
+  },
+  {
+    "objectID": "assignment2.html",
+    "href": "assignment2.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Method 1: Analyze Google Trends search term data for “Trump”, “Kamala Harris” and “Election”\n\ngoogle_trends_data &lt;- read.csv(\"~/Desktop/Trump.Harris.Google.TrendsData.Method1.csv\")\n\nMethod 2: Using gtrendsR Package to collect data\n\n# EPPS 6302: Google Trends data \n# Sample program for using gtrendsR for collecting Google Trends data\n# Documentation: vignette(\"quickstart\", package = \"gtrendsR\")\n# Website: https://cran.r-project.org/web/packages/gtrendsR/index.html\n# GitHub: https://github.com/PMassicotte/gtrendsR\n# Set CRAN mirror\noptions(repos = c(CRAN = \"https://cran.rstudio.com\"))\n\n## Install package\ninstall.packages(\"gtrendsR\")\n\n\nThe downloaded binary packages are in\n    /var/folders/jr/lsx8jskd7hz338bmsv_5j43w0000gn/T//RtmpsjrO8a/downloaded_packages\n\nlibrary(gtrendsR)\n\n## Load library and run gtrends\nlibrary(gtrendsR)\nHarrisTrumpElection = gtrends(c(\"Trump\",\"Harris\",\"election\"), time = \"all\")\n\n## Select data for plotting\nHarrisTrumpElection_interest &lt;- HarrisTrumpElection$interest_over_time\n\n## Plot data\npar(family=\"Georgia\")\nplot(HarrisTrumpElection_interest$hits, type=\"l\")\n\nWarning in xy.coords(x, y, xlabel, ylabel, log): NAs introduced by coercion\n\n\n\n\n\n\n\n\n\n\n## Install package\ninstall.packages(\"gtrendsR\")\n\n\nThe downloaded binary packages are in\n    /var/folders/jr/lsx8jskd7hz338bmsv_5j43w0000gn/T//RtmpsjrO8a/downloaded_packages\n\nlibrary(gtrendsR)\n\nres &lt;- gtrends(c(\"Trump\",\"Harris\",\"election\"))\nplot(res)\n\n\n\n\n\n\n\n\nDifferences between the two methods: In the first method, data was downloaded directly from the Google Trends website after selecting the key terms and generating the trends. Afterward, the CSV file was downloaded and analyzed separately. In contrast, the second method used R and the gtrendsR package to retrieve and plot the data all in one place."
   }
 ]
