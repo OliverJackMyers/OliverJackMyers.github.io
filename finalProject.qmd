@@ -1,0 +1,134 @@
+---
+title: "Final Project"
+---
+
+Google Trends Data
+
+```{r}
+# Set CRAN mirror for package downloads
+options(repos = c(CRAN = "https://cran.rstudio.com"))
+
+# Load necessary libraries
+library(quanteda)
+library(quanteda.textmodels)
+library(quanteda.textplots)
+library(readr)
+library(ggplot2)
+
+# Load Twitter data about the Biden-Xi summit (November 2021)
+summit <- read_csv("https://raw.githubusercontent.com/datageneration/datamethods/master/textanalytics/summit_11162021.csv", show_col_types = FALSE)
+
+# Extract tweet text and create a document-feature matrix (DFM)
+tweet_text <- summit$text
+tokens_tweet <- tokens(tweet_text)
+tweet_dfm <- dfm(tokens_tweet)
+
+# Clean the data by removing punctuation
+cleaned_dfm <- tokens(tweet_text, remove_punct = TRUE) %>%
+  dfm()
+
+# Identify and select the top hashtags from the dataset
+hashtag_dfm <- dfm_select(cleaned_dfm, pattern = "#*")
+top_hashtags <- names(topfeatures(hashtag_dfm, 50))
+
+# Create a feature co-occurrence matrix (FCM) for hashtags
+hashtag_fcm <- fcm(hashtag_dfm)
+
+# Visualize the hashtag network
+top_hashtag_fcm <- fcm_select(hashtag_fcm, pattern = top_hashtags)
+textplot_network(top_hashtag_fcm, min_freq = 50, edge_alpha = 0.8, edge_size = 1)
+```
+
+**Discussion:**
+
+Analyzing Twitter data from the November 2021 Biden-Xi summit, the semantic network visualization shows key connections between trending hash-tags. Central topics like #biden and #china highlight the focus on U.S.-China relations, while hash-tags such as #coronavirus and #fentanyl suggest that domestic issues like the pandemic and opioid crisis were closely linked to the summit discussions. A distinct cluster around #uyghurs and #humanrights underscores the prominence of human rights concerns, particularly regarding Xi Jinping. More peripheral topics like #taiwan reflect specific geopolitical tensions raised during the event.
+
+Analyzing US presidential inaugural speeches
+
+```{r}
+# Quanteda Text Modeling and Analysis Example
+# Documentation: vignette("quickstart", package = c("quanteda.textstats", "quanteda.textmodels"))
+# Website: https://quanteda.io/
+
+# Load necessary libraries
+library(quanteda)
+library(quanteda.textmodels)
+library(quanteda.textplots)
+library(readr)
+library(ggplot2)
+
+# Create a Document-Feature Matrix (DFM) for speeches from 1789 to 1826
+dfm_inaug <- corpus_subset(data_corpus_inaugural, Year <= 1826) %>% 
+  tokens(remove_punct = TRUE) %>% 
+  tokens_remove(stopwords('english')) %>% 
+  dfm() %>%
+  dfm_trim(min_termfreq = 10, verbose = FALSE)
+
+# Analyze U.S. Presidential Inaugural Speeches Over Time
+# Focus on keywords from speeches after 1949
+data_corpus_inaugural_subset <- corpus_subset(data_corpus_inaugural, Year > 1949)
+
+# Generate an x-ray plot for the word "liberty"
+kwic(tokens(data_corpus_inaugural_subset), pattern = "liberty") %>%
+  textplot_xray()
+
+# Tokenize the subset of speeches for further analysis
+tokens_inaugural <- tokens(data_corpus_inaugural_subset)
+
+# Generate an x-ray plot for the words "foreign," "we," and "god"
+textplot_xray(
+  kwic(tokens_inaugural, pattern = "foreign"),
+  kwic(tokens_inaugural, pattern = "we"),
+  kwic(tokens_inaugural, pattern = "god")
+)
+```
+
+**Discussion:**
+
+Over time, one consistent similarity among presidents is the frequent use of "God" toward the end of their speeches, reflecting a tradition of invoking moral authority and divine guidance. However, differences emerge in how presidents emphasize unity and foreign policy. Biden, like Obama, frequently uses "we" to emphasize collective action and national unity, whereas Trump’s less frequent use of "we" suggests a more individualistic tone. Earlier presidents like Johnson and Nixon focused heavily on "foreign" issues during the Cold War, while more recent speeches, including Biden’s, show a shift away from foreign policy toward domestic concerns, such as unity and economic recovery.
+
+**What is wordfish?**
+
+**Wordfish** is an unsupervised Poisson scaling model that estimates document positions based on observed word frequencies amoung the documents. Unlike Wordscores, Wordfish doesn’t require reference texts, making it more flexible to use. Wordfish estimates word positions by calculating the estimates of: Psi (The overall frequency of each word across all documents), and Beta (The word’s power to differentiate between documents).
+
+The following is an example of using wordfish to plot estimated word potions and to show and highlight certain features and where they are positioned relative to the other words. This data comes from 2010 Irish budget speeches and is used to analysis words position and to then also group words use within various parties.
+
+```{r}
+# Load necessary libraries
+library(quanteda)
+library(quanteda.textmodels)
+library(quanteda.textplots)
+library(readr)
+library(ggplot2)
+
+# Load the Irish Budget 2010 corpus
+data(data_corpus_irishbudget2010, package = "quanteda.textmodels")
+
+# Transform the corpus into a document-feature matrix (DFM)
+ie_dfm <- dfm(tokens(data_corpus_irishbudget2010))
+
+# Set reference scores for Wordfish model
+refscores <- c(rep(NA, 4), 1, -1, rep(NA, 8))
+
+# Estimate Wordfish model with document positions
+wf <- textmodel_wordfish(ie_dfm, dir = c(6, 5))
+
+# Plot estimated word positions, highlighting selected terms
+textplot_scale1d(wf, margin = "features", 
+                 highlighted = c("government", "global", "children", 
+                                 "bank", "economy", "the", "citizenship",
+                                 "productivity", "deficit"), 
+                 highlighted_color = "red")
+
+# Plot estimated document positions grouped by party
+textplot_scale1d(wf, groups = data_corpus_irishbudget2010$party)
+
+# Run correspondence analysis (CA) on the DFM
+ca <- textmodel_ca(ie_dfm)
+
+# Plot CA results, grouping documents by party
+textplot_scale1d(ca, margin = "documents", 
+                 groups = docvars(data_corpus_irishbudget2010, "party"))
+```
+
+-   Slapin, Jonathan and Sven-Oliver Proksch. 2008. “[A Scaling Model for Estimating Time-Series Party Positions from Texts](https://doi.org/10.1111/j.1540-5907.2008.00338.x).”*American Journal of Political Science*52(3): 705-772.

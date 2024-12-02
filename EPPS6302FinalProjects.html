@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Assignment 2 – olivermyers.github.io</title>
+<title>EPPS 6302 Final Project – olivermyers.github.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,40 +19,6 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
-}
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -189,14 +155,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#method-1-analyze-google-trends-search-term-data-for-trump-harris-and-election" id="toc-method-1-analyze-google-trends-search-term-data-for-trump-harris-and-election" class="nav-link active" data-scroll-target="#method-1-analyze-google-trends-search-term-data-for-trump-harris-and-election">Method 1: Analyze Google Trends search term data for “Trump”, “Harris” and “Election”</a>
-  <ul class="collapse">
-  <li><a href="#key-dates-of-interest" id="toc-key-dates-of-interest" class="nav-link" data-scroll-target="#key-dates-of-interest"><strong>Key Dates of Interest:</strong></a></li>
-  </ul></li>
-  <li><a href="#method-2-using-gtrendsr-package-to-collect-data" id="toc-method-2-using-gtrendsr-package-to-collect-data" class="nav-link" data-scroll-target="#method-2-using-gtrendsr-package-to-collect-data"><strong>Method 2: Using gtrendsR Package to collect data</strong></a>
-  <ul class="collapse">
-  <li><a href="#differences-between-the-two-methods" id="toc-differences-between-the-two-methods" class="nav-link" data-scroll-target="#differences-between-the-two-methods"><strong>Differences between the two methods</strong>:</a></li>
-  </ul></li>
+  <li><a href="#r" id="toc-r" class="nav-link active" data-scroll-target="#r">r</a></li>
   </ul>
 </nav>
     </div>
@@ -205,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 2</h1>
+<h1 class="title">EPPS 6302 Final Project</h1>
 </div>
 
 
@@ -222,124 +181,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="method-1-analyze-google-trends-search-term-data-for-trump-harris-and-election" class="level2">
-<h2 class="anchored" data-anchor-id="method-1-analyze-google-trends-search-term-data-for-trump-harris-and-election">Method 1: Analyze Google Trends search term data for “Trump”, “Harris” and “Election”</h2>
-<p>I analyzed Google Trends data for three key terms:&nbsp;<strong>“Trump,” “Harris,”</strong>&nbsp;and&nbsp;<strong>“Election,”</strong>&nbsp;covering the date range from&nbsp;<strong>July 1, 2024, to November 1, 2024.</strong>&nbsp;The data was downloaded as a CSV file to examine the trends and significant date intervals.</p>
-<div class="sourceCode" id="cb1" style="color: gray"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Load the CSV file from google trends with the 3 search terms</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>google_trends_data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"/Users/olivermyers/MyWebsite/Trump_Harris_Election_GoogleTrends.csv"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>google_trends_data <span class="ot">&lt;-</span> google_trends_data[<span class="sc">-</span><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>), ]</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">colnames</span>(google_trends_data) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Day"</span>, <span class="st">"Trump"</span>, <span class="st">"Harris"</span>, <span class="st">"Election"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>google_trends_data<span class="sc">$</span>Day <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(google_trends_data<span class="sc">$</span>Day)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># print the cleaned dataset</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(google_trends_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell">
-<div class="cell-output cell-output-stdout">
-<pre><code>         Day Trump Harris Election
-3 2024-07-01     4      1        1
-4 2024-07-02     4      1        1
-5 2024-07-03     3      1        1
-6 2024-07-04     3      1        1
-7 2024-07-05     3      1        2
-8 2024-07-06     3      1        1</code></pre>
-</div>
-</div>
-<div class="sourceCode" id="cb3" style="color: gray"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>significant_dates <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="fu">c</span>(<span class="st">"2024-07-14"</span>, <span class="st">"2024-07-21"</span>, <span class="st">"2024-07-22"</span>, </span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>                               <span class="st">"2024-08-06"</span>, <span class="st">"2024-08-23"</span>, <span class="st">"2024-09-11"</span>, <span class="st">"2024-09-15"</span>))</span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>date_labels <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(significant_dates)</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(google_trends_data<span class="sc">$</span>Day, google_trends_data<span class="sc">$</span>Harris, <span class="at">type =</span> <span class="st">"l"</span>, <span class="at">col =</span> <span class="st">"blue"</span>, <span class="at">lwd =</span> <span class="dv">2</span>,</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Date"</span>, <span class="at">ylab =</span> <span class="st">"Search Interest"</span>, <span class="at">main =</span> <span class="st">"Google Trends: Harris, Trump, and Election"</span>,</span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylim =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">100</span>))  <span class="co"># Set y-axis limits from 0 to 100</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Add lines for Trump and Election</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(google_trends_data<span class="sc">$</span>Day, google_trends_data<span class="sc">$</span>Trump, <span class="at">col =</span> <span class="st">"red"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="fu">lines</span>(google_trends_data<span class="sc">$</span>Day, google_trends_data<span class="sc">$</span>Election, <span class="at">col =</span> <span class="st">"orange"</span>, <span class="at">lwd =</span> <span class="dv">2</span>)</span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Add vertical lines and numbers for significant dates, will be listed below</span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="fu">seq_along</span>(significant_dates)) {</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">abline</span>(<span class="at">v =</span> significant_dates[i], <span class="at">col =</span> <span class="st">"lightgray"</span>, <span class="at">lty =</span> <span class="dv">2</span>, <span class="at">lwd =</span> <span class="dv">2</span>)  <span class="co"># Light gray vertical lines</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">text</span>(significant_dates[i], <span class="dv">100</span>, <span class="at">labels =</span> date_labels[i], <span class="at">col =</span> <span class="st">"black"</span>, <span class="at">cex =</span> <span class="fl">0.8</span>, <span class="at">pos =</span> <span class="dv">3</span>)  <span class="co"># Add numbers above the lines</span></span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Adding a legend in the top right cornner</span></span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">legend</span>(<span class="st">"topright"</span>, <span class="at">legend =</span> <span class="fu">c</span>(<span class="st">"Harris"</span>, <span class="st">"Trump"</span>, <span class="st">"Election"</span>, <span class="st">"Significant Day"</span>),</span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>       <span class="at">col =</span> <span class="fu">c</span>(<span class="st">"blue"</span>, <span class="st">"red"</span>, <span class="st">"orange"</span>, <span class="st">"lightgray"</span>), <span class="at">lty =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">2</span>), <span class="at">lwd =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">2</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment2_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="key-dates-of-interest" class="level3">
-<h3 class="anchored" data-anchor-id="key-dates-of-interest"><strong>Key Dates of Interest:</strong></h3>
-<ul>
-<li><p><strong>July 14, 2024:</strong></p>
-<ul>
-<li>Trump’s Peak: This date marks the first attempted assassination at a Trump rally, leading to a significant spike in search interest.</li>
-</ul></li>
-<li><p><strong>July 21, 2024:</strong></p>
-<ul>
-<li>Harris Begins to Trend: Following President Biden’s decision to drop out of the race, interest in Kamala Harris starts to increase.</li>
-</ul></li>
-<li><p><strong>July 22, 2024:</strong></p>
-<ul>
-<li>Harris Surpasses Trump: Harris peaks above Trump as she announces her candidacy for president.</li>
-</ul></li>
-<li><p><strong>August 6, 2024:</strong></p>
-<ul>
-<li>Harris’s Peak Over Trump: Harris reaches another peak after announcing Tim Walz as her running mate.</li>
-</ul></li>
-<li><p><strong>August 23, 2024:</strong></p>
-<ul>
-<li>Acceptance Speech: Harris experiences another spike in search interest during her acceptance speech at the DNC, where she becomes the Democratic front-runner for the 2024 presidential election.</li>
-</ul></li>
-<li><p><strong>September 11, 2024:</strong></p>
-<ul>
-<li>Simultaneous Peaks: Both Trump and Harris see significant spikes as they attend the 9/11 Memorial event in New York City.</li>
-</ul></li>
-<li><p><strong>September 15, 2024:</strong></p>
-<ul>
-<li>Trump’s Peak: A second attempted assassination at Trump’s international golf course results in another surge in interest for Trump.</li>
-</ul></li>
-<li><p><strong>Election Momentum:</strong></p>
-<ul>
-<li>As the dates approach&nbsp;Election Day, search interest for all three terms—Trump, Harris,&nbsp;and&nbsp;Election—steadily increases.</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="method-2-using-gtrendsr-package-to-collect-data" class="level2">
-<h2 class="anchored" data-anchor-id="method-2-using-gtrendsr-package-to-collect-data"><strong>Method 2: Using gtrendsR Package to collect data</strong></h2>
-<div class="sourceCode" id="cb4" style="color: gray"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># EPPS 6302: Google Trends data </span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Sample program for using gtrendsR for collecting Google Trends data</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Documentation: vignette("quickstart", package = "gtrendsR")</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Website: https://cran.r-project.org/web/packages/gtrendsR/index.html</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># GitHub: https://github.com/PMassicotte/gtrendsR</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Load library and run gtrends</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gtrendsR)</span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>HarrisTrumpElection <span class="ot">&lt;-</span> <span class="fu">gtrends</span>(<span class="fu">c</span>(<span class="st">"Trump"</span>,<span class="st">"Harris"</span>,<span class="st">"election"</span>), <span class="at">time =</span> <span class="st">"all"</span>)</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="do">## Select data for plotting</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>HarrisTrumpElection_interest <span class="ot">&lt;-</span> HarrisTrumpElection<span class="sc">$</span>interest_over_time</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="do">## Plot data</span></span>
-<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(HarrisTrumpElection_interest<span class="sc">$</span>hits, <span class="at">type=</span><span class="st">"l"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="assignment2_files/figure-html/part 2-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
-</div>
-<section id="differences-between-the-two-methods" class="level3">
-<h3 class="anchored" data-anchor-id="differences-between-the-two-methods"><strong>Differences between the two methods</strong>:</h3>
-<p>In the first method, data was downloaded directly from the Google Trends website after selecting the key terms and generating the trends. Afterward, the CSV file was downloaded and analyzed separately. In contrast, the second method used R and the&nbsp;<code>gtrendsR</code>&nbsp;package to retrieve and plot the data all in one place.</p>
+<section id="r" class="level2">
+<h2 class="anchored" data-anchor-id="r">r</h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
