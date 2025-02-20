@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>EPPS 6302 Final Project – OliverMyers.github.io</title>
+<title>epps.6302.assignment1 – OliverMyers.github.io</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -148,6 +148,21 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link" href="./oliver.myers.uxr.cv.2024.pdf"> 
 <span class="menu-text">CV <i class="fa fa-external-link" aria-hidden="true"></i></span></a>
   </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-epps-6323" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">EPPS 6323</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-epps-6323">    
+        <li>
+    <a class="dropdown-item" href="./epps.6302.home.html">
+ <span class="dropdown-text">Knowledge Mining Home</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./epps.6302.assignment1.html">
+ <span class="dropdown-text">Assignment 1</span></a>
+  </li>  
+    </ul>
+  </li>
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -159,124 +174,32 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#project-summary" id="toc-project-summary" class="nav-link active" data-scroll-target="#project-summary">Project Summary</a>
-  <ul class="collapse">
-  <li><a href="#data-collection-flow" id="toc-data-collection-flow" class="nav-link" data-scroll-target="#data-collection-flow">Data Collection Flow</a></li>
-  <li><a href="#data-collection-flow-diagram" id="toc-data-collection-flow-diagram" class="nav-link" data-scroll-target="#data-collection-flow-diagram">Data Collection Flow Diagram</a></li>
-  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
-  </ul></li>
-  <li><a href="#contact-me" id="toc-contact-me" class="nav-link" data-scroll-target="#contact-me">Contact Me</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">EPPS 6302 Final Project</h1>
-</div>
 
 
 
-<div class="quarto-title-meta">
+<p>Review</p>
+<pre><code># Import the TEDS 2016 data in Stata format using the haven package
+## install.packages("haven")
 
-    
-  
-    
-  </div>
-  
+library(haven)
+TEDS_2016 &lt;- read_stata("https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true")
 
+# Prepare the analyze the Party ID variable 
+# Assign label to the values (1=KMT, 2=DPP, 3=NP, 4=PFP, 5=TSU, 6=NPP, 7="NA")
 
-</header>
-
-
-<p>Below are the resources for the EPPS 6302 Final Project</p>
-<div style="margin-top: 2em; margin-bottom: 2em; padding: 1em; padding-top: 1.5em; border: 2px solid #C1D6FB; border-radius: 8px; bg-color: #FFFFFF; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.01);">
-<div style="display: flex;  justify-content: flex-start; align-items: center;">
-<p><img src="Icons/paper_Icon.svg" class="img-fluid" style="margin-right: 6px;" alt="Thumbnail 1" width="25"> <a href="EPPS_Final_Project_Paper.pdf" class="link" style="color: #5C5C5C;  font-size: 1.2em;" title="open &quot;EPPS_Final_Project_Paper.pdf&quot;">Final Project Paper</a> <i class="fa fa-external-link" aria-hidden="true" style="color: #5C5C5C; font-size: 0.9em;"></i></p>
-</div>
-<div style="display: flex;  justify-content: flex-start; align-items: center;">
-<p><img src="Icons/Present_Icon.svg" class="img-fluid" style="margin-right: 6px;" alt="Thumbnail 2" width="25"> <a href="The_Correlation_Between_Google_Trends_Drop_Rate_and_IMDb_Ratings.pdf" style="color: #5C5C5C;  font-size: 1.2em;" title="open &quot;The_Correlation_Between_Google_Trends_Drop_Rate_and_IMDb_Ratings.pdf&quot;">Final Presentation</a> <i class="fa fa-external-link" aria-hidden="true" style="color: #5C5C5C; font-size: 0.9em;"></i></p>
-</div>
-<div style="display: flex;  justify-content: flex-start; align-items: center;">
-<p><img src="Icons/code_Icon.svg" class="img-fluid" style="margin-right: 6px;" alt="Thumbnail 3" width="25"> <a href="EPPS6302_finalproject_code.pdf" style="color: #5C5C5C;  font-size: 1.2em;" title="open &quot;EPPS6302_finalproject_code.pdf&quot;">Data Collection Code (R)</a> <i class="fa fa-external-link" aria-hidden="true" style="color: #5C5C5C; font-size: 0.9em;"></i></p>
-</div>
-<div style="display: flex;  justify-content: flex-start; align-items: center;">
-<p><img src="Icons/code_Icon.svg" class="img-fluid" style="margin-right: 6px;" alt="Thumbnail 4" width="25"> <a href="Stata_Data_Analysis.pdf" style="color: #5C5C5C;  font-size: 1.2em;" title="open &quot;Stata_Data_Analysis.pdf&quot;">Analysis Code (Stata)</a> <i class="fa fa-external-link" aria-hidden="true" style="color: #5C5C5C; font-size: 0.9em;"></i></p>
-</div>
-</div>
-<section id="project-summary" class="level2">
-<h2 class="anchored" data-anchor-id="project-summary">Project Summary</h2>
-<p>Our study investigates whether there is a correlation between the decline in Google Trends search interest for movies during the first 21 days post-release and their ratings on IMDb and Rotten Tomatoes. The project combines data from Google Trends, IMDb, and Box Office Mojo to evaluate digital engagement as a predictive measure for movie reception.</p>
-<section id="data-collection-flow" class="level3">
-<h3 class="anchored" data-anchor-id="data-collection-flow">Data Collection Flow</h3>
-<p>Below is an overview of the data collection process:</p>
-<ul>
-<li><strong>Web Scraping</strong>:
-<ul>
-<li>Used the <code>rvest</code> package to scrape Box Office Mojo for movie metadata.</li>
-<li>Enriched the dataset with additional information from the OMDb API.</li>
-</ul></li>
-<li><strong>Google Trends Data</strong>:
-<ul>
-<li>Retrieved search interest data (Day 1 and Day 21) using the <code>gtrendsR</code> package.</li>
-</ul></li>
-<li><strong>Data Integration</strong>:
-<ul>
-<li>Combined Google Trends, IMDb ratings, and daily earnings data into a unified dataset.</li>
-</ul></li>
-<li><strong>Analysis</strong>:
-<ul>
-<li>Conducted regression analysis in Stata with key variables including search interest drop rate, runtime, box office revenue, and number of votes.</li>
-</ul></li>
-</ul>
-</section>
-<section id="data-collection-flow-diagram" class="level3">
-<h3 class="anchored" data-anchor-id="data-collection-flow-diagram">Data Collection Flow Diagram</h3>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="EPPS_6302_Data.collection.flow.png" class="img-fluid figure-img"></p>
-<figcaption>Data Collection Flow Diagram</figcaption>
-</figure>
-</div>
-</section>
-<section id="references" class="level3">
-<h3 class="anchored" data-anchor-id="references">References</h3>
-<div style="opacity: 0.7; font-size: .8em;">
-<ol type="1">
-<li><p>Box Office Mojo. (n.d.). Yearly box office results.&nbsp;<a href="https://www.boxofficemojo.com/">https://www.boxofficemojo.com</a>&nbsp;(November 16, 2024).</p></li>
-<li><p>Cebrián, Eduardo, and Josep Domenech. 2023. “Is Google Trends a Quality Data Source?”&nbsp;<em>Applied Economics Letters</em>&nbsp;30(6): 811–15.&nbsp;doi:10.1080/13504851.2021.2023088&nbsp;(November 8, 2024).</p></li>
-<li><p>Demir, Deniz, Olga Kapralova, and Hongze Lai. 2012. “Predicting IMDB Movie Ratings Using Google Trends.”&nbsp;<a href="https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=fb53e9605997374f178359d3e1e86008dac6c28a" class="uri">https://citeseerx.ist.psu.edu/document?repid=rep1&amp;type=pdf&amp;doi=fb53e9605997374f178359d3e1e86008dac6c28a</a>(November 1, 2024).</p></li>
-<li><p>Fritzsch, Benjamin, Kai Wenger, Philipp Sibbertsen, and Georg Ullmann. 2020. “Can Google Trends Improve Sales Forecasts on a Product Level?”&nbsp;<em>Applied Economics Letters</em>&nbsp;27(17): 1409–14.&nbsp;doi:10.1080/13504851.2019.1686110(November 8, 2024).</p></li>
-<li><p>Google. 2024.&nbsp;<em>Google News Initiative: Google Trends.</em><a href="https://newsinitiative.withgoogle.com/resources/trainings/advanced-google-trends/" class="uri">https://newsinitiative.withgoogle.com/resources/trainings/advanced-google-trends/</a>&nbsp;(November 2, 2024).</p></li>
-<li><p>Hand, Chris, and Guy Judge. 2012. “Searching for the Picture: Forecasting UK Cinema Admissions Using Google Trends Data.”&nbsp;<em>Applied Economics Letters</em>&nbsp;19(11): 1051–55.&nbsp;doi:10.1080/13504851.2011.613744&nbsp;(November 4, 2024).</p></li>
-<li><p>Jun, Seung-Pyo, Hyoung Sun Yoo, and San Choi. 2018. “Ten Years of Research Change Using Google Trends: From the Perspective of Big Data Utilizations and Applications.”&nbsp;<em>Technological Forecasting and Social Change</em>130: 69–87.&nbsp;doi:10.1016/j.techfore.2017.11.009&nbsp;(November 4, 2024).</p></li>
-<li><p>Massicotte, Pierre, and Dirk Eddelbuettel. 2022.&nbsp;<em>gtrendsR: Perform and Display Google Trends Queries</em>. R package version 1.5.1.&nbsp;<a href="https://cran.r-project.org/package=gtrendsR">https://CRAN.R-project.org/package=gtrendsR</a>&nbsp;(December 3, 2024).</p></li>
-<li><p>OMDb API. (n.d.). The Open Movie Database.&nbsp;<a href="https://www.omdbapi.com/">https://www.omdbapi.com</a>&nbsp;(November 17, 2024).</p></li>
-<li><p>OpenAI. 2024.&nbsp;<em>ChatGPT.</em>&nbsp;<a href="https://openai.com/chatgpt" class="uri">https://openai.com/chatgpt</a>&nbsp;(November 30, 2024).</p></li>
-<li><p>Shukla, Anuja, Aditya Yadav, and Shiv Kumar Sharma. 2022. “Predicting Movie Ticket Sales Using Google Trends: Implication of Big Data Analytics.”&nbsp;<em>IUP Journal of Management Research</em>&nbsp;21(1).&nbsp;https://openurl.ebsco.com/EPDB:gcd:11:23114539/detailv2&nbsp;(November 4, 2024).</p></li>
-<li><p>Silva, Emmanuel Sirimal, and Dag Øivind Madsen. 2022. “Google Trends.” In&nbsp;<em>Encyclopedia of Tourism Management and Marketing</em>, ed.&nbsp;Dimitrios Buhalis, 446–47. Edward Elgar Publishing.&nbsp;doi:10.4337/9781800377486.google.trends&nbsp;(November 2, 2024).</p></li>
-<li><p>Wickham, Hadley, and Davis Vaughan. 2024.&nbsp;<em>tidyr: Tidy Messy Data</em>. R package version 1.3.1.&nbsp;<a href="https://cran.r-project.org/package=tidyr">https://CRAN.R-project.org/package=tidyr</a>&nbsp;(December 3, 2024).</p></li>
-<li><p>Wickham, Hadley, Jim Hester, and Jennifer Bryan. 2024.&nbsp;<em>readr: Read Rectangular Text Data</em>. R package version 2.1.5.&nbsp;<a href="https://cran.r-project.org/package=readr">https://CRAN.R-project.org/package=readr</a>&nbsp;(December 3, 2024).</p></li>
-<li><p>Wickham, Hadley. 2024.&nbsp;<em>rvest: Easily Harvest (Scrape) Web Pages</em>. R package version 1.0.4.&nbsp;<a href="https://github.com/tidyverse/rvest" class="uri">https://github.com/tidyverse/rvest</a>,&nbsp;<a href="https://rvest.tidyverse.org/" class="uri">https://rvest.tidyverse.org/</a>&nbsp;(November 5, 2024).</p></li>
-<li><p>Wooldridge, Jeffrey M. 2013.&nbsp;<em>Introductory Econometrics: A Modern Approach</em>. 5th ed.&nbsp;Mason, OH: South-Western Cengage Learning (November 5, 2024).</p></li>
-</ol>
-</div>
-</section>
-</section>
-<section id="contact-me" class="level2">
-<h2 class="anchored" data-anchor-id="contact-me">Contact Me</h2>
-<p>If you have any questions about this project, please feel free to contact me at:</p>
-<p><strong>Email</strong>: <a href="mailto:oliver.myers@utdallas.edu">oliver.myers@utdallas.edu</a></p>
+TEDS_2016$PartyID &lt;- factor(TEDS_2016$PartyID, labels=c("KMT","DPP","NP","PFP", "TSU", "NPP","NA"))</code></pre>
+<p>What problems do you encounter when working with the dataset?</p>
+<p>There is a few missing values that result in a NA from the dataset.</p>
+<p>How to deal with missing values?</p>
+<p>Following the assignmnet and example online, to resolve this issue</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
