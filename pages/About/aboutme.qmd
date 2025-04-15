@@ -1,0 +1,63 @@
+---
+title: |
+  # **About Me**
+editor: visual
+toc: False
+title-block-banner: "#E2F2FF"
+title-block-color: "#104FA3"
+execute:
+  freeze: true
+---
+
+```{=html}
+<style>
+ .breadcrumb {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Slight background for readability */
+  }
+
+  .breadcrumb a.breadcrumb-epps {
+    text-decoration: none;
+    color:  #104FA3;
+  }
+  
+  /* Override title block banner text color */
+  .quarto-title-block .title, 
+  .quarto-title-block .subtitle {
+    color: #104FA3 !important;
+  }
+  
+  .quarto-title-block h1 {
+    color: #104FA3 !important;
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+  
+    .quarto-title-block h4, h5, a.quarto-title-block h4 {
+    color: #104FA3 !important;
+    margin-bottom: 5px;
+    margin-top: -5px;
+  }
+}
+  
+ h2, .h2, h3, .h3 {
+    margin-top: 36px;
+    webkit-text-fill-color: #1F2328;
+    color:#1F2328;
+}
+
+</style>
+```
+
+Hi there! I’m **Oliver Jack Myers**, a passionate mixed-methods **User Experience (UX) Researcher and Designer** currently pursuing my **Master of Science in Applied Cognition and Neuroscience** with a focus on **Human-Computer Interaction** at the **University of Texas at Dallas**.
+
+I specialize in using both qualitative and quantitative methods to uncover insights that drive impactful design solutions. My experience spans user interviews, usability analysis, survey design, journey mapping, prototyping, and more. With a strong foundation in tools like R Studio, Figma, and Qualtrics, I bring a comprehensive approach to improving user experiences.
+
+When I’m not diving into research or design, you can find me exploring the intersection of cognitive science and technology, continuously seeking innovative ways to bridge the gap between human needs and digital solutions.
+
+Feel free to explore my portfolio and connect with me to learn more about my work!
+
+-   **UX Research and Design Portfolio**: [OliverJackMyers.com](http://www.OliverJackMyers.com)
+-   **Email**: [OliverJackMyers.Design\@gmail.com](mailto:OliverJackMyers.Design@gmail.com)
+-   **LinkedIn:** [\@oliverjackmyers](https://www.linkedin.com/in/oliverjackmyers/ "Go to Oliver's Linkedin")
+-   **GitHub:** [\@OliverJackMyers](https://github.com/OliverJackMyers)
