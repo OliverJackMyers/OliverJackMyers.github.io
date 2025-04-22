@@ -866,5 +866,19 @@
     "title": "",
     "section": "",
     "text": "Hi there! I’m Oliver Jack Myers, a passionate mixed-methods User Experience (UX) Researcher and Designer currently pursuing my Master of Science in Applied Cognition and Neuroscience with a focus on Human-Computer Interaction at the University of Texas at Dallas.\nI specialize in using both qualitative and quantitative methods to uncover insights that drive impactful design solutions. My experience spans user interviews, usability analysis, survey design, journey mapping, prototyping, and more. With a strong foundation in tools like R Studio, Figma, and Qualtrics, I bring a comprehensive approach to improving user experiences.\nWhen I’m not diving into research or design, you can find me exploring the intersection of cognitive science and technology, continuously seeking innovative ways to bridge the gap between human needs and digital solutions.\nFeel free to explore my portfolio and connect with me to learn more about my work!\n\nUX Research and Design Portfolio: OliverJackMyers.com\nEmail: OliverJackMyers.Design@gmail.com\nLinkedIn: @oliverjackmyers\nGitHub: @OliverJackMyers"
+  },
+  {
+    "objectID": "pages/EPPS_6354/Assignment07/epps.6354.assignment07.html",
+    "href": "pages/EPPS_6354/Assignment07/epps.6354.assignment07.html",
+    "title": "",
+    "section": "",
+    "text": "Go to live Shiny app website »"
+  },
+  {
+    "objectID": "pages/EPPS_6354/Assignment07/epps.6354.assignment07.html#live-preview-of-my-app",
+    "href": "pages/EPPS_6354/Assignment07/epps.6354.assignment07.html#live-preview-of-my-app",
+    "title": "",
+    "section": "Live Preview of My App",
+    "text": "Live Preview of My App\n\n\n\n\n\n Launch Live Shiny App » \n\nAbout this dashboard\nA dynamic instructor dashboard that connects to your local PostgreSQL server and lets you:\n- Filter by department or instructor\n- Sort salaries highest → lowest\n- Visualize trends over time with interactive bar charts\n\n\nPreview Outline\n\nHeader – Course selector + connection status\n\nData Table – Searchable list of instructors & salaries\n\nSalary Chart – Clickable bars drill down to details\n\nAlternate View – Swap in another variable (e.g. research funding)"
   }
 ]
