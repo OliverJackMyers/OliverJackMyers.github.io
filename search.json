@@ -880,5 +880,19 @@
     "title": "",
     "section": "Live Preview of My App",
     "text": "Live Preview of My App\n\n\n\n\n\n Launch Live Shiny App » \n\nAbout this dashboard\nA dynamic instructor dashboard that connects to your local PostgreSQL server and lets you:\n- Filter by department or instructor\n- Sort salaries highest → lowest\n- Visualize trends over time with interactive bar charts\n\n\nPreview Outline\n\nHeader – Course selector + connection status\n\nData Table – Searchable list of instructors & salaries\n\nSalary Chart – Clickable bars drill down to details\n\nAlternate View – Swap in another variable (e.g. research funding)"
+  },
+  {
+    "objectID": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-presentation-slides",
+    "href": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-presentation-slides",
+    "title": "",
+    "section": "Final Presentation (Slides)",
+    "text": "Final Presentation (Slides)"
+  },
+  {
+    "objectID": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-project-app",
+    "href": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-project-app",
+    "title": "",
+    "section": "Final Project (APP)",
+    "text": "Final Project (APP)"
   }
 ]
