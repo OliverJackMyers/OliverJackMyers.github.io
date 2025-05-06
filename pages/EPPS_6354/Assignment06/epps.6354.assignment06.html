@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-inputd3e4d7cdff252e29 – Oliver Myers</title>
+<title>quarto-input177aa37318b0e272 – Oliver Myers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -77,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
 
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -174,7 +174,7 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 3</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment04/EPPS_6354_Assignment04.html">
+    <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment02/epps.6354.assignment2.html">
  <span class="dropdown-text">Assignment 4</span></a>
   </li>  
         <li>
@@ -212,9 +212,9 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title"></h1><h5 id="epps-6354-information-management-assignment-07" class="anchored"><a href="../../../pages/EPPS_6354/Home/epps.6354.home.html" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">EPPS 6354</a>-Information Management | Assignment 07</h5>
-<h1 id="interactive-postgresql-dashboards-with-shiny"><strong>Interactive PostgreSQL Dashboards with Shiny</strong></h1>
-            <p class="subtitle lead"><strong>Empower Your Data‑Driven Decisions in Real Time</strong></p>
+      <h1 class="title"></h1><h5 id="epps-6354-information-management-assignment-06" class="anchored"><a href="../../../pages/EPPS_6354/Home/epps.6354.home.html" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">EPPS 6354</a>-Information Management | Assignment 06</h5>
+<h1 id="web-data-sql-logic"><strong>Web Data &amp; SQL Logic</strong></h1>
+            <p class="subtitle lead"><strong>Exploring website structure and advanced SQL</strong></p>
                       </div>
   </div>
     
@@ -230,7 +230,15 @@ ul.task-list li input[type="checkbox"] {
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#assignment-6-json-xml-and-sql-exercises" id="toc-assignment-6-json-xml-and-sql-exercises" class="nav-link active" data-scroll-target="#assignment-6-json-xml-and-sql-exercises">Assignment 6 – JSON, XML, and SQL Exercises</a></li>
+  </ul>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/pages/EPPS_6354/Assignment06/IM_Assignment06_Presentation.pdf"><i class="bi bi-link-45deg"></i>Assignment 06 (PDF)</a></li></ul></div></nav>
+    </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
 
@@ -275,95 +283,12 @@ ul.task-list li input[type="checkbox"] {
 }
 
 </style>
-<p><a href="https://oliverjackmyers.shinyapps.io/Class_test/">Go to live Shiny app website »</a></p>
-<section id="live-preview-of-my-app" class="level2">
-<h2 class="anchored" data-anchor-id="live-preview-of-my-app">Live Preview of My App</h2>
-<!-- tooltip + click behavior -->
-<script>
-document.addEventListener('DOMContentLoaded', function(){
-  const container = document.querySelector('.preview-container');
-  if (!container) return;
+<section id="assignment-6-json-xml-and-sql-exercises" class="level2">
+<h2 class="anchored" data-anchor-id="assignment-6-json-xml-and-sql-exercises">Assignment 6 – JSON, XML, and SQL Exercises</h2>
+<embed src="../../../pages/EPPS_6354/Assignment06/IM_Assignment06_Presentation.pdf" width="100% vw" height="1000px">
 
-  // create hover tip
-  const tip = document.createElement('div');
-  tip.className = 'hover-tip';
-  tip.textContent = 'Go to website';
-  document.body.appendChild(tip);
 
-  container.addEventListener('mousemove', e => {
-    tip.style.top     = (e.pageY + 15) + 'px';
-    tip.style.left    = (e.pageX + 15) + 'px';
-    tip.style.opacity = 1;
-  });
-  container.addEventListener('mouseleave', () => {
-    tip.style.opacity = 0;
-  });
-  container.addEventListener('click', () => {
-    window.open('https://oliverjackmyers.shinyapps.io/Class_test/', '_blank');
-  });
-});
-</script>
-<!-- button + container styling -->
-<style>
-.btn-primary {
-  display: inline-block;
-  margin-bottom: 1em;
-  padding: .5em 1em;
-  background: #1f77b4;
-  color: #fff;
-  border-radius: 4px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.preview-container {
-  position: relative;
-  border: 2px solid #ccc;
-  border-radius: 6px;
-  overflow: hidden;
-  cursor: pointer;
-  height: 400px;
-}
-.hover-tip {
-  position: absolute;
-  pointer-events: none;
-  background: rgba(0,0,0,0.75);
-  color: #fff;
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 0.9em;
-  opacity: 0;
-  transition: opacity 0.1s;
-}
-</style>
-<!-- launch button -->
-<p><span class="btn-primary">&nbsp;Launch Live Shiny App&nbsp;»&nbsp;</span></p>
-<blockquote class="blockquote">
-<p><strong>About this dashboard</strong><br>
-A dynamic instructor dashboard that connects to your local PostgreSQL server and lets you:<br>
-- <strong>Filter</strong> by department or instructor<br>
-- <strong>Sort</strong> salaries highest&nbsp;→&nbsp;lowest<br>
-- <strong>Visualize</strong> trends over time with interactive bar charts</p>
-</blockquote>
-<section id="preview-outline" class="level3">
-<h3 class="anchored" data-anchor-id="preview-outline">Preview Outline</h3>
-<ol type="1">
-<li><strong>Header</strong>&nbsp;– Course selector + connection status<br>
-</li>
-<li><strong>Data Table</strong>&nbsp;– Searchable list of instructors &amp; salaries<br>
-</li>
-<li><strong>Salary Chart</strong>&nbsp;– Clickable bars drill down to details<br>
-</li>
-<li><strong>Alternate View</strong>&nbsp;– Swap in another variable (e.g.&nbsp;research funding)</li>
-</ol>
-<!-- embedded app preview -->
-<div class="preview-container">
-<iframe src="https://oliverjackmyers.shinyapps.io/Class_test/?embed=true" style="border:none; width:100%; height:100%;">
-</iframe>
-</div>
 </section>
-</section>
-
-
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

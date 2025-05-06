@@ -1,0 +1,63 @@
+---
+title: |
+  ##### <a href="/pages/EPPS_6354/Home/epps.6354.home.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">EPPS 6354</a>-Information Management | Assignment 04
+  # **Demystifying Entity Dependencies: Weak vs. Strong Entity Sets (PDF)**
+subtitle: "**An in-depth exploration of key relationships in database design with real-world examples. **"
+editor: visual
+toc: true
+title-block-banner: "#E2F2FF"
+title-block-color: "#104FA3"
+execute:
+  freeze: true
+include-before-body: |
+  <div style="background:yellow; padding:10px;">Test Breadcrumbs</div>
+format:
+  html:
+    other-links:
+      - text: Assignment 04 (PDF)
+        href: /pages/EPPS_6354/Assignment04/IM_Assignment04_Presentation.pdf
+---
+
+```{=html}
+<style>
+ .breadcrumb {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Slight background for readability */
+  }
+
+  .breadcrumb a.breadcrumb-epps {
+    text-decoration: none;
+    color:  #104FA3;
+  }
+  
+  /* Override title block banner text color */
+  .quarto-title-block .title, 
+  .quarto-title-block .subtitle {
+    color: #104FA3 !important;
+  }
+  
+  .quarto-title-block h1 {
+    color: #104FA3 !important;
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+  
+    .quarto-title-block h4, h5, a.quarto-title-block h4 {
+    color: #104FA3 !important;
+    margin-bottom: 5px;
+    margin-top: -5px;
+  }
+}
+  
+ h2, .h2, h3, .h3 {
+    margin-top: 36px;
+    webkit-text-fill-color: #1F2328;
+    color:#1F2328;
+}
+
+</style>
+```
+
+## Understanding Weak and Strong Entities (PDF)
+
+<embed src="/pages/EPPS_6354/Assignment04/IM_Assignment04_Presentation.pdf" width="100% vw" height="1000px" />

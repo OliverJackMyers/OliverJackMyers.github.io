@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>quarto-inputfccada1c9511a8db – Oliver Myers</title>
+<title>quarto-inputc24ba906b8916632 – Oliver Myers</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -166,8 +166,28 @@ ul.task-list li input[type="checkbox"] {
  <span class="dropdown-text">Assignment 1</span></a>
   </li>  
         <li>
+    <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment02/epps.6354.assignment2.html">
+ <span class="dropdown-text">Assignment 2</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment03/epps.6354.assignment3.html">
+ <span class="dropdown-text">Assignment 3</span></a>
+  </li>  
+        <li>
     <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment04/EPPS_6354_Assignment04.html">
  <span class="dropdown-text">Assignment 4</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment05/epps.6354.assignment5.html">
+ <span class="dropdown-text">Assignment 5</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment06/epps.6354.assignment06.html">
+ <span class="dropdown-text">Assignment 6</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../../../pages/EPPS_6354/Assignment07/epps.6354.assignment07.html">
+ <span class="dropdown-text">Assignment 7</span></a>
   </li>  
     </ul>
   </li>
@@ -176,7 +196,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">CV</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../../pages/about/aboutme.qmd"> 
+    <a class="nav-link" href="../../../pages/About/aboutme.html"> 
 <span class="menu-text">About</span></a>
   </li>  
 </ul>
@@ -215,10 +235,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#what-problems-do-you-encounter-when-working-with-the-data-set" id="toc-what-problems-do-you-encounter-when-working-with-the-data-set" class="nav-link active" data-scroll-target="#what-problems-do-you-encounter-when-working-with-the-data-set">What problems do you encounter when working with the data set?</a></li>
-  <li><a href="#how-to-deal-with-missing-values" id="toc-how-to-deal-with-missing-values" class="nav-link" data-scroll-target="#how-to-deal-with-missing-values">How to deal with missing values?</a></li>
+  <li><a href="#exploring-domain-specific-use-cases-retrieval-efficiency-and-nosql-paradigms" id="toc-exploring-domain-specific-use-cases-retrieval-efficiency-and-nosql-paradigms" class="nav-link active" data-scroll-target="#exploring-domain-specific-use-cases-retrieval-efficiency-and-nosql-paradigms">Exploring domain-specific use cases, retrieval efficiency, and NoSQL paradigms</a></li>
   </ul>
-</nav>
+<div class="quarto-other-links"><h2>Other Links</h2><ul><li><a href="/pages/EPPS_6354/Assignment01/IM_Assignment01_Presentation.pdf"><i class="bi bi-link-45deg"></i>Assignment 01 (PDF)</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content quarto-banner-title-block" id="quarto-document-content">
@@ -264,23 +283,9 @@ ul.task-list li input[type="checkbox"] {
 }
 
 </style>
-<pre><code># Import the TEDS 2016 data in Stata format using the haven package
-## install.packages("haven")
-
-library(haven)
-TEDS_2016 &lt;- read_stata("https://github.com/datageneration/home/blob/master/DataProgramming/data/TEDS_2016.dta?raw=true")
-
-# Prepare the analyze the Party ID variable 
-# Assign label to the values (1=KMT, 2=DPP, 3=NP, 4=PFP, 5=TSU, 6=NPP, 7="NA")
-
-TEDS_2016$PartyID &lt;- factor(TEDS_2016$PartyID, labels=c("KMT","DPP","NP","PFP", "TSU", "NPP","NA"))</code></pre>
-<section id="what-problems-do-you-encounter-when-working-with-the-data-set" class="level3">
-<h3 class="anchored" data-anchor-id="what-problems-do-you-encounter-when-working-with-the-data-set">What problems do you encounter when working with the data set?</h3>
-<p>There is a few missing values that result in a NA from the data set.</p>
-</section>
-<section id="how-to-deal-with-missing-values" class="level3">
-<h3 class="anchored" data-anchor-id="how-to-deal-with-missing-values">How to deal with missing values?</h3>
-<p>Following the assignment and example online, to resolve this issue</p>
+<section id="exploring-domain-specific-use-cases-retrieval-efficiency-and-nosql-paradigms" class="level2">
+<h2 class="anchored" data-anchor-id="exploring-domain-specific-use-cases-retrieval-efficiency-and-nosql-paradigms">Exploring domain-specific use cases, retrieval efficiency, and NoSQL paradigms</h2>
+<embed src="../../../pages/EPPS_6354/Assignment01/IM_Assignment01_Presentation.pdf" width="100% vw" height="1000px">
 
 
 </section>

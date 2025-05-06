@@ -1,0 +1,152 @@
+---
+title: |
+  ##### <a href="/pages/EPPS_6354/Home/epps.6354.home.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">EPPS 6354</a>-Information Management | Assignment 07
+  # **Interactive PostgreSQL Dashboards with Shiny**
+subtitle: "**Empower Your Data‑Driven Decisions in Real Time**"
+editor: visual
+toc: False
+title-block-banner: "#E2F2FF"
+title-block-color: "#104FA3"
+execute:
+  freeze: true
+include-before-body: |
+  <div style="background:yellow; padding:10px;">Test Breadcrumbs</div>
+---
+
+```{=html}
+<style>
+ .breadcrumb {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Slight background for readability */
+  }
+
+  .breadcrumb a.breadcrumb-epps {
+    text-decoration: none;
+    color:  #104FA3;
+  }
+  
+  /* Override title block banner text color */
+  .quarto-title-block .title, 
+  .quarto-title-block .subtitle {
+    color: #104FA3 !important;
+  }
+  
+  .quarto-title-block h1 {
+    color: #104FA3 !important;
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+  
+    .quarto-title-block h4, h5, a.quarto-title-block h4 {
+    color: #104FA3 !important;
+    margin-bottom: 5px;
+    margin-top: -5px;
+  }
+}
+  
+ h2, .h2, h3, .h3 {
+    margin-top: 36px;
+    webkit-text-fill-color: #1F2328;
+    color:#1F2328;
+}
+
+</style>
+```
+
+[Go to live Shiny app website »](https://oliverjackmyers.shinyapps.io/Class_test/)
+
+<div>
+
+## Live Preview of My App
+
+<!-- tooltip + click behavior -->
+
+```{=html}
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  const container = document.querySelector('.preview-container');
+  if (!container) return;
+
+  // create hover tip
+  const tip = document.createElement('div');
+  tip.className = 'hover-tip';
+  tip.textContent = 'Go to website';
+  document.body.appendChild(tip);
+
+  container.addEventListener('mousemove', e => {
+    tip.style.top     = (e.pageY + 15) + 'px';
+    tip.style.left    = (e.pageX + 15) + 'px';
+    tip.style.opacity = 1;
+  });
+  container.addEventListener('mouseleave', () => {
+    tip.style.opacity = 0;
+  });
+  container.addEventListener('click', () => {
+    window.open('https://oliverjackmyers.shinyapps.io/Class_test/', '_blank');
+  });
+});
+</script>
+```
+
+<!-- button + container styling -->
+
+```{=html}
+<style>
+.btn-primary {
+  display: inline-block;
+  margin-bottom: 1em;
+  padding: .5em 1em;
+  background: #1f77b4;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+.preview-container {
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  height: 400px;
+}
+.hover-tip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  opacity: 0;
+  transition: opacity 0.1s;
+}
+</style>
+```
+
+<!-- launch button -->
+
+[ Launch Live Shiny App » ]{.btn-primary}
+
+> **About this dashboard**\
+> A dynamic instructor dashboard that connects to your local PostgreSQL server and lets you:\
+> - **Filter** by department or instructor\
+> - **Sort** salaries highest → lowest\
+> - **Visualize** trends over time with interactive bar charts
+
+### Preview Outline
+
+1.  **Header** – Course selector + connection status\
+2.  **Data Table** – Searchable list of instructors & salaries\
+3.  **Salary Chart** – Clickable bars drill down to details\
+4.  **Alternate View** – Swap in another variable (e.g. research funding)
+
+<!-- embedded app preview -->
+
+::: preview-container
+<iframe
+    src="https://oliverjackmyers.shinyapps.io/Class_test/?embed=true"
+    style="border:none; width:100%; height:100%;"> </iframe>
+:::
+
+</div>
