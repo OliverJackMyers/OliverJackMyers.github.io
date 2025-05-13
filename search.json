@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "",
     "section": "",
-    "text": "Welcome Friend!\nHello and welcome to my website! My name is Oliver Myers, and I am excited to share my journey in data science and UX research with you.\n\nLocation: Dallas, Texas\nRole: Mixed-Methods User Experience Researcher\nSchool: University of Texas at Dallas\nDegree: Master of Science in Applied Cognition and Neuroscience, focusing on Human-Computer Interaction\n\n\n\n\nUX Research Portfolio:\nIf you are looking for my UX Research Portfolio here is the link Portfolio: OliverJackMyers.com\n\nFeel free to explore my portfolio and connect with me to learn more about my work!\n\nEmail: OliverJackMyers.Design@gmail.com\nLinkedIn: @oliverjackmyers\nGitHub: @OliverJackMyers"
+    "text": "Hello and welcome to my website! My name is Oliver Myers, and I am excited to share my journey in data science and UX research with you.\n\nLocation: Dallas, Texas\nRole: Mixed-Methods User Experience Researcher\nSchool: University of Texas at Dallas\nDegree: Master of Science in Applied Cognition and Neuroscience, focusing on Human-Computer Interaction"
   },
   {
     "objectID": "about.html",
@@ -822,8 +822,8 @@
     "objectID": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#project-proposal-pdf",
     "href": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#project-proposal-pdf",
     "title": "",
-    "section": "Project Proposal (Pdf)",
-    "text": "Project Proposal (Pdf)"
+    "section": "Project Proposal (PDF)",
+    "text": "Project Proposal (PDF)"
   },
   {
     "objectID": "pages/EPPS_6302/Assignment03/assignment4.html#scraping-foreign-reserve-data",
@@ -893,7 +893,7 @@
     "href": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-project-app",
     "title": "",
     "section": "Final Project (APP)",
-    "text": "Final Project (APP)"
+    "text": "Final Project (APP)\nGo to live Shiny app website »\n\nAbout This App: TPSA Rubric Evaluation Dashboard\nAn interactive R Shiny dashboard connected to a PostgreSQL database, designed to help the Texas Public Safety Association (TPSA) analyze and refine competitive event scoring rubrics. This tool allows TPSA staff to:\n\nSelect & View specific TPSA conferences and competitive events.\nAnalyze Performance by viewing aggregated student scores for each event within a conference.\nDrill Down into detailed rubric criteria for individual competitive events.\nVisualize Effectiveness with interactive bar charts displaying average scores per criterion, color-coded to indicate performance status.\nExplore Data in sortable and searchable tables showing rubric criteria and scores.\nIdentify Trends to objectively assess competitive event rigor and track the impact of rubric modifications over time.\nAccess Cloud Data from a PostgreSQL database hosted on Railway, populated with TPSA’s student scores, rubric details, and event information."
   },
   {
     "objectID": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#project-proposal-pdf-2",
@@ -913,15 +913,15 @@
     "objectID": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#final-project-presentation-pdf",
     "href": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#final-project-presentation-pdf",
     "title": "",
-    "section": "Final Project Presentation (Pdf)",
-    "text": "Final Project Presentation (Pdf)"
+    "section": "Final Project Presentation (PDF)",
+    "text": "Final Project Presentation (PDF)"
   },
   {
     "objectID": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#final-project-app",
     "href": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#final-project-app",
     "title": "",
     "section": "Final Project (APP)",
-    "text": "Final Project (APP)"
+    "text": "Final Project (APP)\nGo to live Shiny app website »\n\nAbout This App: App Review UX Heuristic Analyzer\nAn interactive R Shiny dashboard designed to mine user experience (UX) insights from Apple App Store reviews. This tool allows you to:\n\nSearch & Select iOS apps directly from the App Store via API integration.\nScrape & Analyze recent user reviews for any selected app.\nCategorize Feedback by automatically tagging review sentences with Nielsen’s 10 Usability Heuristics based on keyword matching.\nGauge Sentiment associated with specific heuristic violations to understand issue severity.\nVisualize Trends with interactive charts showing heuristic mention frequency and priority scores.\nFilter Insights by app version and review date to track changes over time.\nDrill Down into specific user comments related to each heuristic, with relevant keywords highlighted."
   },
   {
     "objectID": "pages/EPPS_6323/Assignment01/Lab01.html",
@@ -1214,7 +1214,91 @@
     "objectID": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#final-project-report-pdf",
     "href": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#final-project-report-pdf",
     "title": "",
-    "section": "Final Project Report (Pdf)",
-    "text": "Final Project Report (Pdf)"
+    "section": "Final Project Report (PDF)",
+    "text": "Final Project Report (PDF)"
+  },
+  {
+    "objectID": "pages/EPPS_6323/Home/epps.6323.home.html#final-project",
+    "href": "pages/EPPS_6323/Home/epps.6323.home.html#final-project",
+    "title": "",
+    "section": "Final Project",
+    "text": "Final Project"
+  },
+  {
+    "objectID": "pages/EPPS_6323/Home/epps.6323.home.html#course-project-app-review-ux-heuristic-analyzer",
+    "href": "pages/EPPS_6323/Home/epps.6323.home.html#course-project-app-review-ux-heuristic-analyzer",
+    "title": "",
+    "section": "Course Project: App Review UX Heuristic Analyzer",
+    "text": "Course Project: App Review UX Heuristic Analyzer\nThis final project for EPPS 6323 Knowledge Mining involved the development of the “App Review UX Heuristic Analyzer,” an interactive R Shiny application designed to extract actionable insights from Apple App Store user reviews.\nMoving beyond initial explorations into predictive sentiment forecasting, this project focused on applying heuristic evaluation principles, Natural Language Processing (NLP) for keyword matching, and sentiment analysis to provide a robust framework for understanding user experience pain points. The application allows users to:\n\nSearch for iOS apps and retrieve their metadata.\nScrape recent user reviews for selected applications.\nAutomatically categorize review sentences based on Nielsen’s 10 Usability Heuristics by matching them against predefined keyword sets.\nAnalyze the sentiment associated with heuristic-specific comments to gauge issue severity.\nExplore these insights through interactive visualizations and data tables, with options to filter by app version.\n\nThe goal was to create a practical tool that empowers UX researchers, product managers, and developers to quickly identify and prioritize usability issues directly from user feedback, facilitating data-driven improvements to mobile applications. The project demonstrates a knowledge mining approach by transforming unstructured user comments into structured, categorized, and actionable intelligence."
+  },
+  {
+    "objectID": "pages/EPPS_6354/Home/epps.6354.home.html#final-project",
+    "href": "pages/EPPS_6354/Home/epps.6354.home.html#final-project",
+    "title": "",
+    "section": "Final Project",
+    "text": "Final Project"
+  },
+  {
+    "objectID": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-project-paper-pdf",
+    "href": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-project-paper-pdf",
+    "title": "",
+    "section": "Final Project Paper (PDF)",
+    "text": "Final Project Paper (PDF)"
+  },
+  {
+    "objectID": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-project-app-1",
+    "href": "pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html#final-project-app-1",
+    "title": "",
+    "section": "Final Project (APP)",
+    "text": "Final Project (APP)"
+  },
+  {
+    "objectID": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#live-preview-of-my-app",
+    "href": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#live-preview-of-my-app",
+    "title": "",
+    "section": "Live Preview of My App",
+    "text": "Live Preview of My App\n\n\n\n\n\n Launch Live Shiny App » \n\nAbout this dashboard\nA dynamic instructor dashboard that connects to your local PostgreSQL server and lets you:\n- Filter by department or instructor\n- Sort salaries highest → lowest\n- Visualize trends over time with interactive bar charts"
+  },
+  {
+    "objectID": "pages/EPPS_6354/Home/epps.6354.home.html#course-project-tpsa-rubric-evaluation-database-and-interactive-app",
+    "href": "pages/EPPS_6354/Home/epps.6354.home.html#course-project-tpsa-rubric-evaluation-database-and-interactive-app",
+    "title": "",
+    "section": "Course Project: TPSA Rubric Evaluation Database and Interactive App",
+    "text": "Course Project: TPSA Rubric Evaluation Database and Interactive App\nThis final project for EPPS 6354 Information Management involved the design and implementation of a centralized PostgreSQL database and an interactive R Shiny web application for the Texas Public Safety Association (TPSA). The primary objective was to provide TPSA with a robust system to analyze and refine the scoring rubrics used in their diverse competitive events for high school students.\nThe project addressed TPSA’s challenge of manually assessing rubric effectiveness across numerous events and conferences. Key components and functionalities include:\n\nRelational Database Design: A PostgreSQL database schema was developed to integrate TPSA’s existing CSV datasets on student scores, rubric criteria, competitive events, conference details, and judge information. The database was hosted on the Railway cloud platform for broader accessibility.\nInteractive Shiny Dashboard: An R Shiny application serves as the analytical interface, allowing TPSA staff to:\n\nSelect specific conferences and competitive events via dropdown menus.\nView aggregated performance data and detailed breakdowns of rubric criteria.\nVisualize event and criteria scores using interactive bar charts (via highcharter), with color-coding to highlight performance status.\nExplore data in sortable and searchable tables (via reactable).\n\nDynamic SQL Queries: The Shiny app dynamically constructs and executes SQL queries against the PostgreSQL database (managed via DBI, RPostgres, and pool packages) to retrieve relevant performance data based on user selections.\nData-Driven Rubric Refinement: The system enables TPSA to objectively assess competitive event rigor, identify underperforming or problematic rubric criteria, and track the impact of rubric modifications over time.\n\nThe resulting solution provides TPSA with an efficient and insightful platform for data-driven decision-making, aiming to enhance the fairness, consistency, and effectiveness of their rubric evaluation process. This project demonstrates the practical application of database design, data management, and interactive visualization techniques to solve real-world organizational challenges."
+  },
+  {
+    "objectID": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#project-progress-report-slides",
+    "href": "pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html#project-progress-report-slides",
+    "title": "",
+    "section": "Project Progress Report (Slides)",
+    "text": "Project Progress Report (Slides)"
+  },
+  {
+    "objectID": "index.html#epps-6302-data-collection-production",
+    "href": "index.html#epps-6302-data-collection-production",
+    "title": "",
+    "section": "EPPS 6302 Data Collection & Production",
+    "text": "EPPS 6302 Data Collection & Production"
+  },
+  {
+    "objectID": "index.html#epps-6323-knowledge-mining",
+    "href": "index.html#epps-6323-knowledge-mining",
+    "title": "",
+    "section": "EPPS 6323 Knowledge Mining",
+    "text": "EPPS 6323 Knowledge Mining"
+  },
+  {
+    "objectID": "index.html#epps-6354-information-management",
+    "href": "index.html#epps-6354-information-management",
+    "title": "",
+    "section": "EPPS 6354 Information Management",
+    "text": "EPPS 6354 Information Management"
+  },
+  {
+    "objectID": "index.html#epps-6354-information-management-1",
+    "href": "index.html#epps-6354-information-management-1",
+    "title": "My EPPS 6354 Work",
+    "section": "EPPS 6354 Information Management",
+    "text": "EPPS 6354 Information Management\n\n\n\n\n\n\n Project Proposal\n\n\n Assignment 1\n\n\n Assignment 2\n\n\n\n\n Assignment 3\n\n\n Assignment 4\n\n\n Assignment 5\n\n\n\n\n Assignment 6\n\n\n Assignment 7"
   }
 ]
