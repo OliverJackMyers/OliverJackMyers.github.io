@@ -313,10 +313,47 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Professor</strong>: Dr.&nbsp;Karl Ho</li>
 </ul>
 <p>This course taught me how to harness <strong>knowledge mining</strong>, combining <strong>data science, AI, and machine learning</strong> to extract insights from complex data. I explored <strong>LLMs, generative AI, text mining, NLP, and predictive modeling</strong>, gaining hands-on experience in AI-driven research and its ethical implications.</p>
+<style>
+/* CSS for mobile viewport constraint */
+@media (max-width: 767px) { /* Adjust 767px if you have a different mobile breakpoint */
+  .mobile-constrained-container {
+    max-width: 400px !important; /* Apply the max-width to the main container */
+    margin-left: auto;      /* Center the main container */
+    margin-right: auto;     /* Center the main container */
+  }
+
+  /* Make items in layout-ncol stack and take full width of the constrained container */
+  .mobile-constrained-container .quarto-layout-panel .quarto-layout-row {
+    /* quarto-layout-row is the flex container for cells in a row */
+    flex-direction: column !important; /* Stack cells vertically */
+  }
+
+  .mobile-constrained-container .quarto-layout-cell {
+    flex-basis: 100% !important;    /* Cell takes full width */
+    max-width: 100% !important;     /* Cell takes full width */
+    width: 100% !important;         /* Cell takes full width */
+    margin-left: 0 !important;      /* Reset any Quarto default horizontal margins */
+    margin-right: 0 !important;     /* Reset any Quarto default horizontal margins */
+    padding-left: 5px !important;   /* Optional: add some padding if needed */
+    padding-right: 5px !important;  /* Optional: add some padding if needed */
+    margin-bottom: 1rem;          /* Add some space between stacked items */
+  }
+
+  .mobile-constrained-container .quarto-layout-cell img {
+    width: 90% !important; /* Adjust image width within stacked cells (e.g., 90% of the cell) */
+    /* The fig-align attribute in markdown might still control horizontal positioning.
+       If not, use display: block and margin: auto for centering. */
+    display: block;         /* Allows margin auto to work for horizontal centering */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+</style>
 </section>
 <section id="assignments" class="level2">
 <h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
 <p>Here’s a collection of assignments I’ve completed for this class. Click on each card to explore the details of each assignment or project!</p>
+<div class="mobile-constrained-container">
 <div>
 
 </div>
@@ -368,9 +405,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 </div>
+</div>
 </section>
 <section id="final-project" class="level2">
 <h2 class="anchored" data-anchor-id="final-project">Final Project</h2>
+<div class="mobile-constrained-container">
 <div>
 
 </div>
@@ -381,6 +420,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure">
 <p><a href="../../../pages/EPPS_6323/projectproposal/EPPS_6323_projectproposal.html"><img src="EPPS_Proposal.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></a></p>
 </figure>
+</div>
 </div>
 </div>
 </div>
