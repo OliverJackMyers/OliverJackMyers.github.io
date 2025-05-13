@@ -1,0 +1,189 @@
+---
+pagetitle: "EPPS 6354 | Home"
+title: |
+  ##### EPPS 6354 | Spring 2025, UTD
+  # Information Management
+subtitle: |
+  <a href="/pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Final Project, Proposal & APP</a> &nbsp; &nbsp; <a href="/pages/EPPS_6354/Assignment01/epps.6354.assignment1.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Assignment 01</a> 
+   &nbsp; &nbsp; <a href="/pages/EPPS_6354/Assignment02/epps.6354.assignment2.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Assignment 02</a> 
+   &nbsp; &nbsp; <a href="/pages/EPPS_6354/Assignment03/epps.6354.assignment3.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Assignment 03</a>
+   &nbsp; &nbsp; <a href="/pages/EPPS_6354/Assignment04/EPPS_6354_Assignment04.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Assignment 04</a>
+      &nbsp; &nbsp; <a href="/pages/EPPS_6354/Assignment05/epps.6354.assignment5.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Assignment 05</a>
+         &nbsp; &nbsp; <a href="/pages/EPPS_6354/Assignment06/epps.6354.assignment06.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Assignment 06</a>
+            &nbsp; &nbsp; <a href="/pages/EPPS_6354/Assignment07/epps.6354.assignment07.qmd" class="breadcrumb-epps" style="color: #104FA3 !important; text-decoration: underline;">Assignment 07</a>
+
+editor: visual
+toc: true
+title-block-banner: "#E2F2FF"
+title-block-color: "#104FA3"
+execute:
+  freeze: true
+---
+
+```{=html}
+<style>
+ .breadcrumb {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.8); /* Optional: Slight background for readability */
+  }
+
+  .breadcrumb a.breadcrumb-epps {
+    text-decoration: none;
+    color:  #104FA3;
+  }
+  
+  /* Override title block banner text color */
+  .quarto-title-block .title, 
+  .quarto-title-block .subtitle {
+    color: #104FA3 !important;
+  }
+  
+  .quarto-title-block h1 {
+    color: #104FA3 !important;
+    padding: 0px;
+    margin-bottom: 10px;
+  }
+  
+    .quarto-title-block h4, h5, a.quarto-title-block h4 {
+    color: #104FA3 !important;
+    margin-bottom: 5px;
+    margin-top: -5px;
+  }
+}
+  
+ h2, .h2, h3, .h3 {
+    margin-top: 36px;
+    webkit-text-fill-color: #1F2328;
+    color:#1F2328;
+}
+
+</style>
+```
+
+## Course Overview
+
+```{=r}
+library(particlesjs)
+```
+Welcome to the **Information Management** homepage! This page summarizes my experience in this course, including key assignments and the final project.
+
+-   **Course Name**: Information Management\
+-   **Semester**: Spring 2025\
+-   **Professor**: Dr. Karl Ho
+
+This course explored **database design, management, and programming** using **SQL, Python, HTML, and Dash**, alongside modern technologies like **NoSQL**. I applied **knowledge mining, AI, and machine learning** to extract insights, integrating **text mining, NLP, and predictive modeling** into database-driven applications.
+
+## Assignments
+
+Here’s a collection of assignments I’ve completed for this class. Click on each card to explore the details of each assignment or project!
+
+::: {layout-ncol="3"}
+[![](EPPS_01.png){width="25%" fig-align="center"}](/pages/EPPS_6354/Assignment01/epps.6354.assignment1.qmd)
+
+[![](EPPS_02.png){width="25%" fig-align="right"}](/pages/EPPS_6354/Assignment02/epps.6354.assignment2.qmd)
+
+[![](EPPS_03.png){width="25%" fig-align="right"}](/pages/EPPS_6354/Assignment03/epps.6354.assignment3.qmd)
+
+[![](EPPS_04.png){width="25%" fig-align="right"}](/pages/EPPS_6354/Assignment04/EPPS_6354_Assignment04.qmd)
+
+[![](EPPS_05.png){width="25%" fig-align="right"}](/pages/EPPS_6354/Assignment05/epps.6354.assignment5.qmd)
+
+[![](EPPS_06.png){width="25%" fig-align="right"}](/pages/EPPS_6354/Assignment06/epps.6354.assignment06.qmd)
+
+[![](EPPS_07.png){width="25%" fig-align="right"}](/pages/EPPS_6354/Assignment07/epps.6354.assignment07.qmd)
+:::
+
+## Final Project
+
+::: {layout-ncol="3"}
+[![](EPPS_proposal.png){fig-align="left" width="25%"}](/pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.qmd)
+:::
+
+
+## Course Project: TPSA Rubric Evaluation Database and Interactive App
+
+This final project for EPPS 6354 Information Management involved the design and implementation of a **centralized PostgreSQL database and an interactive R Shiny web application** for the **Texas Public Safety Association (TPSA)**. The primary objective was to provide TPSA with a robust system to analyze and refine the scoring rubrics used in their diverse competitive events for high school students.
+
+The project addressed TPSA's challenge of manually assessing rubric effectiveness across numerous events and conferences. Key components and functionalities include:
+
+*   **Relational Database Design:** A PostgreSQL database schema was developed to integrate TPSA's existing CSV datasets on student scores, rubric criteria, competitive events, conference details, and judge information. The database was hosted on the Railway cloud platform for broader accessibility.
+*   **Interactive Shiny Dashboard:** An R Shiny application serves as the analytical interface, allowing TPSA staff to:
+    *   Select specific conferences and competitive events via dropdown menus.
+    *   View aggregated performance data and detailed breakdowns of rubric criteria.
+    *   Visualize event and criteria scores using interactive bar charts (via `highcharter`), with color-coding to highlight performance status.
+    *   Explore data in sortable and searchable tables (via `reactable`).
+*   **Dynamic SQL Queries:** The Shiny app dynamically constructs and executes SQL queries against the PostgreSQL database (managed via `DBI`, `RPostgres`, and `pool` packages) to retrieve relevant performance data based on user selections.
+*   **Data-Driven Rubric Refinement:** The system enables TPSA to objectively assess competitive event rigor, identify underperforming or problematic rubric criteria, and track the impact of rubric modifications over time.
+
+The resulting solution provides TPSA with an efficient and insightful platform for data-driven decision-making, aiming to enhance the fairness, consistency, and effectiveness of their rubric evaluation process. This project demonstrates the practical application of database design, data management, and interactive visualization techniques to solve real-world organizational challenges.
+
+::: {#css}
+```{=html}
+<style>
+.card {
+  min-height: 80px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s;
+  padding: 10px;
+  line-height: 1.2;
+}
+
+#content-container {
+    background-color: white;
+    padding: 20px;
+    max-width: 1200px;  /* Adjust width as needed */
+    margin: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a soft shadow */
+    border-radius: 8px; /* Optional rounded corners */
+}
+
+.card:hover {
+  border-color: #333; /* Darken border on hover */
+  text-decoration: underline;
+}
+
+.card a {
+  text-decoration: none; /* Removes underline */
+  font-weight: normal; /* Removes bold */
+  color: black;
+  display: block;
+  line-height: 1.2;
+}
+</style>
+
+
+
+<script src="https://esm.sh/css-doodle/css-doodle.min.js?raw"></script>
+
+
+<style>
+  #particles-js {
+  width: 100%;             /* Full width or specify a fixed width */
+  height: 20vh;           /* Fixed height */
+  position: relative;      /* Ensures positioning context */
+  background-color: #F9FAFB;  /* Optional: Set a background color */
+  overflow: hidden;        /* Ensures particles don't overflow */
+}
+
+<script type="module">
+  import 'https://esm.sh/css-doodle'
+  body { margin: 0; overflow: hidden; }
+</script>
+
+</style>
+
+<!-- scripts -->
+<script src="../particles.js"></script>
+<script src="particles.js-master/demo/js/app.js"></script>
+
+
+  <script>
+    particlesJS.load("particles-js", "./particles.json");
+  </script>
+```
+:::
