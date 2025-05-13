@@ -313,26 +313,63 @@ ul.task-list li input[type="checkbox"] {
 <li><strong>Professor</strong>: Dr.&nbsp;Karl Ho</li>
 </ul>
 <p>This course explored <strong>database design, management, and programming</strong> using <strong>SQL, Python, HTML, and Dash</strong>, alongside modern technologies like <strong>NoSQL</strong>. I applied <strong>knowledge mining, AI, and machine learning</strong> to extract insights, integrating <strong>text mining, NLP, and predictive modeling</strong> into database-driven applications.</p>
+<style>
+/* CSS for mobile viewport constraint */
+@media (max-width: 767px) { /* Adjust 767px if you have a different mobile breakpoint */
+  .mobile-constrained-container {
+    max-width: 400px !important; /* Apply the max-width to the main container */
+    margin-left: auto;      /* Center the main container */
+    margin-right: auto;     /* Center the main container */
+  }
+
+  /* Make items in layout-ncol stack and take full width of the constrained container */
+  .mobile-constrained-container .quarto-layout-panel .quarto-layout-row {
+    /* quarto-layout-row is the flex container for cells in a row */
+    flex-direction: column !important; /* Stack cells vertically */
+  }
+
+  .mobile-constrained-container .quarto-layout-cell {
+    flex-basis: 100% !important;    /* Cell takes full width */
+    max-width: 100% !important;     /* Cell takes full width */
+    width: 100% !important;         /* Cell takes full width */
+    margin-left: 0 !important;      /* Reset any Quarto default horizontal margins */
+    margin-right: 0 !important;     /* Reset any Quarto default horizontal margins */
+    padding-left: 5px !important;   /* Optional: add some padding if needed */
+    padding-right: 5px !important;  /* Optional: add some padding if needed */
+    margin-bottom: 1rem;          /* Add some space between stacked items */
+  }
+
+  .mobile-constrained-container .quarto-layout-cell img {
+    width: 90% !important; /* Adjust image width within stacked cells (e.g., 90% of the cell) */
+    /* The fig-align attribute in markdown might still control horizontal positioning.
+       If not, use display: block and margin: auto for centering. */
+    display: block;         /* Allows margin auto to work for horizontal centering */
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+</style>
 </section>
 <section id="assignments" class="level2">
 <h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
 <p>Here’s a collection of assignments I’ve completed for this class. Click on each card to explore the details of each assignment or project!</p>
+<div class="mobile-constrained-container">
 <div>
 
 </div>
 <div class="quarto-layout-panel" data-layout-ncol="3">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-center">
+<div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="../../../pages/EPPS_6354/Assignment01/epps.6354.assignment1.html"><img src="EPPS_01.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
+<p><a href="../../../pages/EPPS_6354/Assignment01/epps.6354.assignment1.html"><img src="EPPS_01.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../pages/EPPS_6354/Assignment02/epps.6354.assignment2.html"><img src="EPPS_02.png" class="img-fluid quarto-figure quarto-figure-right figure-img"></a></p>
+<p><a href="../../../pages/EPPS_6354/Assignment02/epps.6354.assignment2.html"><img src="EPPS_02.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -346,16 +383,16 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="../../../pages/EPPS_6354/Assignment04/EPPS_6354_Assignment04.html"><img src="EPPS_04.png" class="img-fluid quarto-figure quarto-figure-right figure-img"></a></p>
+<p><a href="../../../pages/EPPS_6354/Assignment04/EPPS_6354_Assignment04.html"><img src="EPPS_04.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></a></p>
 </figure>
 </div>
 </div>
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-center">
 <figure class="figure">
-<p><a href="../../../pages/EPPS_6354/Assignment05/epps.6354.assignment5.html"><img src="EPPS_05.png" class="img-fluid quarto-figure quarto-figure-right figure-img"></a></p>
+<p><a href="../../../pages/EPPS_6354/Assignment05/epps.6354.assignment5.html"><img src="EPPS_05.png" class="img-fluid quarto-figure quarto-figure-center figure-img"></a></p>
 </figure>
 </div>
 </div>
@@ -369,10 +406,11 @@ ul.task-list li input[type="checkbox"] {
 </div>
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: center;">
-<div class="quarto-figure quarto-figure-right">
+<div class="quarto-figure quarto-figure-left">
 <figure class="figure">
-<p><a href="../../../pages/EPPS_6354/Assignment07/epps.6354.assignment07.html"><img src="EPPS_07.png" class="img-fluid quarto-figure quarto-figure-right figure-img"></a></p>
+<p><a href="../../../pages/EPPS_6354/Assignment07/epps.6354.assignment07.html"><img src="EPPS_07.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></a></p>
 </figure>
+</div>
 </div>
 </div>
 </div>
@@ -380,6 +418,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="final-project" class="level2">
 <h2 class="anchored" data-anchor-id="final-project">Final Project</h2>
+<div class="mobile-constrained-container">
 <div>
 
 </div>
@@ -390,6 +429,7 @@ ul.task-list li input[type="checkbox"] {
 <figure class="figure">
 <p><a href="../../../pages/EPPS_6354/projectproposal/EPPS_6354_projectproposal.html"><img src="EPPS_proposal.png" class="img-fluid quarto-figure quarto-figure-left figure-img"></a></p>
 </figure>
+</div>
 </div>
 </div>
 </div>
